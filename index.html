@@ -19,9 +19,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/landing.css?v=202610152">
-<script src="js/frame-guard.js?v=202610152"></script>
-<script src="js/landing.js?v=202610152" defer></script>
+<link rel="stylesheet" href="css/landing.css?v=202610160">
+<script src="js/frame-guard.js?v=202610160"></script>
+<link rel="stylesheet" href="css/movimiento.css?v=202610160">
+<script src="js/landing.js?v=202610160" defer></script>
+<script src="js/movimiento.js?v=202610160" defer></script>
 </head>
 <body>
 <a class="skip" href="#main" data-i18n="skip">Saltar al contenido</a>
@@ -29,7 +31,7 @@
 <!-- ═════ CABECERA ═════ -->
 <header class="hdr" id="top">
   <div class="wrap hdr-in">
-    <a class="logo" href="#top" aria-label="Naoj"><img src="img/marca/naoj-logotipo-horizontal.svg" alt="Naoj" width="138" height="34"></a>
+    <a class="logo" href="#top" aria-label="Naoj"><svg class="logo-anim" viewBox="0 0 974 240" width="138" height="34" aria-hidden="true"><g transform="scale(.455)"><path class="lg-n" pathLength="1" d="M45 80H185L466 408V220H375L317 152V80H233V0H423V80H495V152H564V528H430L165 216H129V336H199V430H291V528H84V430H0V336H45Z"/></g><g class="lg-t" transform="translate(326.6 42.6)"><g fill="currentColor"><path d="M0 0H24L124 94.6V0H161V153H134L36 60.5V153H0Z"/><path d="M172 153L260 0H275L363 153H324L267.5 58L210 153Z"/></g><g fill="none" stroke="currentColor"><circle cx="446.5" cy="77.5" r="64.25" stroke-width="33.5"/><path d="M629.5 0V87A52.5 52.5 0 0 1 577 139.5Q559 139.5 543 123" stroke-width="35"/></g></g></svg></a>
     <nav class="nav" aria-label="Principal" data-i18n-aria="nav.aria">
       <a href="#equipamiento" data-i18n="nav.features">Equipamiento</a>
       <a href="#galeria" data-i18n="nav.gallery">Galería</a>
@@ -47,6 +49,7 @@
 <main id="main">
 <!-- ═════ PORTADA ═════ -->
 <section class="hero">
+  <div class="patron patron-hero" aria-hidden="true"></div>
   <div class="wrap hero-in">
     <div class="hero-copy reveal">
       <p class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">Nuevo · Plataforma para colegios</span></p>
@@ -63,23 +66,27 @@
     <div class="hero-visual reveal" aria-hidden="true">
       <div class="laptop"><div class="screen"><img data-shot="dash-direccion" alt="" width="1600" height="1000" fetchpriority="high"></div><div class="base"></div></div>
       <div class="phone float"><div class="screen"><img data-shot="mobile-inicio-padre" alt="" width="780" height="1688"></div></div>
+      <div class="fcard fc1"><span class="fc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 21l5-3 5 3-1.5-8.5"/></svg></span><div><small data-i18n="hero.c1">Promedio del colegio</small><b data-count="78.6" data-dec="1">78.6</b><i class="fc-bar"><i></i></i></div></div>
+      <div class="fcard fc2"><span class="fc-ico amber"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M8 2v4M16 2v4M3 10h18M8.5 15l2.5 2.5 4.5-4.5"/></svg></span><div><small data-i18n="hero.c2">Asistencia de hoy</small><b><span data-count="98.4" data-dec="1">98.4</span>%</b></div></div>
+      <div class="fcard fc3"><span class="fc-av">CP</span><div><small>Carlos Pérez <em>15:58</em></small><b class="fc-msg" data-i18n="hero.c3">¡Muchas gracias! Ahí estaremos.</b></div></div>
     </div>
   </div>
 </section>
 
 <!-- ═════ FICHA TÉCNICA ═════ -->
 <section class="specs" aria-labelledby="specs-t">
+  <div class="patron" aria-hidden="true"></div>
   <div class="wrap">
     <h2 class="kicker" id="specs-t" data-i18n="specs.title">Ficha técnica</h2>
     <ul class="spec-grid">
-      <li class="reveal"><b>4</b><span data-i18n="specs.roles">perfiles: dirección, maestros, alumnos y familias</span></li>
-      <li class="reveal"><b>5</b><span data-i18n="specs.questions">tipos de pregunta en los exámenes en línea</span></li>
-      <li class="reveal"><b>4</b><span data-i18n="specs.views">vistas de agenda: mes, semana, día y lista</span></li>
-      <li class="reveal"><b>4</b><span data-i18n="specs.att">estados de asistencia: presente, tarde, ausente y justificado</span></li>
+      <li class="reveal"><b data-count="4">4</b><span data-i18n="specs.roles">perfiles: dirección, maestros, alumnos y familias</span></li>
+      <li class="reveal"><b data-count="5">5</b><span data-i18n="specs.questions">tipos de pregunta en los exámenes en línea</span></li>
+      <li class="reveal"><b data-count="4">4</b><span data-i18n="specs.views">vistas de agenda: mes, semana, día y lista</span></li>
+      <li class="reveal"><b data-count="4">4</b><span data-i18n="specs.att">estados de asistencia: presente, tarde, ausente y justificado</span></li>
       <li class="reveal"><b>0</b><span data-i18n="specs.formulas">fórmulas que escribir: los promedios ponderados se calculan solos</span></li>
-      <li class="reveal"><b>1</b><span data-i18n="specs.history">historial por nota: quién la cambió, cuándo y por qué</span></li>
-      <li class="reveal"><b>30′</b><span data-i18n="specs.session">y la sesión se cierra sola si nadie la usa</span></li>
-      <li class="reveal"><b>100%</b><span data-i18n="specs.mobile">funcional en el celular</span></li>
+      <li class="reveal"><b data-count="1">1</b><span data-i18n="specs.history">historial por nota: quién la cambió, cuándo y por qué</span></li>
+      <li class="reveal"><b><span data-count="30">30</span>′</b><span data-i18n="specs.session">y la sesión se cierra sola si nadie la usa</span></li>
+      <li class="reveal"><b><span data-count="100">100</span>%</b><span data-i18n="specs.mobile">funcional en el celular</span></li>
     </ul>
   </div>
 </section>
@@ -90,8 +97,8 @@
     <p class="kicker" data-i18n="feat.kicker">Equipamiento de serie</p>
     <h2 class="h2" id="feat-t" data-i18n="feat.title">Todo lo que un colegio necesita para estar al día.</h2>
 
-    <article class="feat reveal">
-      <div class="feat-img"><div class="laptop sm"><div class="screen"><img data-shot="calificaciones" alt="Libro de calificaciones con notas ponderadas" data-i18n-alt="alt.grades" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div></div>
+    <article class="feat reveal" data-reveal="feat">
+      <div class="feat-img"><div class="laptop sm"><div class="screen"><img data-shot="calificaciones" alt="Libro de calificaciones con notas ponderadas" data-i18n-alt="alt.grades" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div><div class="chip chip-l" aria-hidden="true"><span class="chip-ico"><svg viewBox="0 0 24 24"><path d="M18 5H6l6 7-6 7h12"/></svg></span><div><small data-i18n="f1.chip">Promedio de la unidad</small><b data-count="76.5" data-dec="1">76.5</b><i class="chip-bar"><i></i></i></div></div></div>
       <div class="feat-txt">
         <span class="tag" data-i18n="f1.tag">Calificaciones</span>
         <h3 data-i18n="f1.title">Notas ponderadas, sin fórmulas.</h3>
@@ -100,11 +107,11 @@
       </div>
     </article>
 
-    <article class="feat rev reveal">
+    <article class="feat rev reveal" data-reveal="feat">
       <div class="feat-img duo">
         <div class="laptop sm"><div class="screen"><img data-shot="asistencia" alt="Toma de asistencia del día" data-i18n-alt="alt.att" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div>
         <div class="phone sm"><div class="screen"><img data-shot="mobile-asistencia" alt="Asistencia en el celular" data-i18n-alt="alt.attPhone" loading="lazy" width="780" height="1688"></div></div>
-      </div>
+      <div class="chip chip-l chip-seg" aria-hidden="true"><span data-i18n="f2.s1">Presente</span><span data-i18n="f2.s2">Tarde</span><span data-i18n="f2.s3">Ausente</span><span data-i18n="f2.s4">Justificado</span></div></div>
       <div class="feat-txt">
         <span class="tag" data-i18n="f2.tag">Asistencia</span>
         <h3 data-i18n="f2.title">La asistencia del día, en un minuto.</h3>
@@ -113,11 +120,11 @@
       </div>
     </article>
 
-    <article class="feat reveal">
+    <article class="feat reveal" data-reveal="feat">
       <div class="feat-img duo">
         <div class="laptop sm"><div class="screen"><img data-shot="muro" alt="Muro de noticias con avisos obligatorios" data-i18n-alt="alt.wall" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div>
         <div class="phone sm"><div class="screen"><img data-shot="mobile-mensajes" alt="Mensajes entre un padre y un maestro" data-i18n-alt="alt.msgPhone" loading="lazy" width="780" height="1688"></div></div>
-      </div>
+      <div class="chip chip-l" aria-hidden="true"><span class="chip-ico ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><small data-i18n="f3.chip">Leído y entendido</small><b><span data-count="18">18</span> <span data-i18n="f3.chip2">familias</span></b></div></div></div>
       <div class="feat-txt">
         <span class="tag" data-i18n="f3.tag">Comunicación</span>
         <h3 data-i18n="f3.title">Cada aviso llega. Y usted sabe quién lo leyó.</h3>
@@ -126,8 +133,8 @@
       </div>
     </article>
 
-    <article class="feat rev reveal">
-      <div class="feat-img"><div class="laptop sm"><div class="screen"><img data-shot="agenda" alt="Agenda mensual del colegio" data-i18n-alt="alt.cal" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div></div>
+    <article class="feat rev reveal" data-reveal="feat">
+      <div class="feat-img"><div class="laptop sm"><div class="screen"><img data-shot="agenda" alt="Agenda mensual del colegio" data-i18n-alt="alt.cal" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div><div class="chip chip-r" aria-hidden="true"><span class="chip-date"><b>19</b><small data-i18n="f4.mes">oct</small></span><div><small data-i18n="f4.chip">Cita confirmada</small><b data-i18n="f4.chip2">15:00 · Coordinación</b></div><span class="chip-ok"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span></div></div>
       <div class="feat-txt">
         <span class="tag" data-i18n="f4.tag">Agenda y citas</span>
         <h3 data-i18n="f4.title">Todo el calendario del colegio, en un lugar.</h3>
@@ -136,11 +143,11 @@
       </div>
     </article>
 
-    <article class="feat reveal">
+    <article class="feat reveal" data-reveal="feat">
       <div class="feat-img duo">
         <div class="laptop sm"><div class="screen"><img data-shot="examen-resultado" alt="Resultado de un examen en línea" data-i18n-alt="alt.exam" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div>
         <div class="phone sm"><div class="screen"><img data-shot="mobile-rendir" alt="Examen en línea con temporizador en el celular" data-i18n-alt="alt.examPhone" loading="lazy" width="780" height="1688"></div></div>
-      </div>
+      <div class="chip chip-l" aria-hidden="true"><span class="chip-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg></span><div><small data-i18n="f5.chip">Tiempo restante</small><b class="chip-timer">29:58</b></div></div></div>
       <div class="feat-txt">
         <span class="tag" data-i18n="f5.tag">Exámenes en línea</span>
         <h3 data-i18n="f5.title">Exámenes que se califican solos.</h3>
@@ -149,11 +156,11 @@
       </div>
     </article>
 
-    <article class="feat rev reveal">
+    <article class="feat rev reveal" data-reveal="feat">
       <div class="feat-img duo">
         <div class="laptop sm"><div class="screen"><img data-shot="progreso" alt="Progreso académico de una alumna, visto por su padre" data-i18n-alt="alt.family" loading="lazy" width="1600" height="1000"></div><div class="base"></div></div>
         <div class="phone sm"><div class="screen"><img data-shot="mobile-inicio-padre" alt="Inicio de un padre en el celular" data-i18n-alt="alt.familyPhone" loading="lazy" width="780" height="1688"></div></div>
-      </div>
+      <div class="chip chip-l chip-notif" aria-hidden="true"><span class="chip-ico"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0c0 6 2.5 7.5 2.5 7.5h-17S6 15 6 9M10 20a2 2 0 0 0 4 0"/></svg></span><div><small data-i18n="f6.chip">Nueva nota · Matemática</small><b>88.0</b></div></div></div>
       <div class="feat-txt">
         <span class="tag" data-i18n="f6.tag">Familias y seguridad</span>
         <h3 data-i18n="f6.title">Las familias, al día sin tener que preguntar.</h3>
@@ -194,12 +201,20 @@
 
 <!-- ═════ DEMO ═════ -->
 <section class="demo" id="demo" aria-labelledby="demo-t">
+  <div class="patron patron-demo" aria-hidden="true"></div>
   <div class="wrap">
     <p class="kicker light" data-i18n="demo.kicker">Prueba de manejo</p>
     <h2 class="h2 light" id="demo-t" data-i18n="demo.title">Pruébela ahora. Sin registrarse.</h2>
     <p class="demo-sub" data-i18n="demo.sub">Un colegio de ejemplo con 48 alumnos, 4 maestros y sus familias. Cambie entre Dirección, Maestro, Alumna y Padre desde la barra de arriba: ponga notas, tome asistencia, responda el examen en línea. Nada de lo que haga se guarda.</p>
-    <div class="demo-frame reveal">
+    <div class="roles reveal" role="tablist" aria-label="Perfiles de la demo" data-i18n-aria="demo.rolesAria">
+      <button type="button" class="role on" role="tab" id="tab-direccion" aria-selected="true" aria-controls="demoView" tabindex="0" data-rol="direccion" data-prev="dash-direccion"><span class="role-ico"><svg viewBox="0 0 24 24"><path d="M3 9.5 12 5l9 4.5-9 4.5z"/><path d="M7 11.5V16c0 1.5 2.2 3 5 3s5-1.5 5-3v-4.5"/></svg></span><b data-i18n="r1">Dirección</b><small data-i18n="r1t">Todo el colegio de un vistazo: grados, cursos y alumnos en riesgo.</small></button>
+      <button type="button" class="role" role="tab" id="tab-maestro" aria-selected="false" aria-controls="demoView" tabindex="-1" data-rol="maestro" data-prev="dash-maestro"><span class="role-ico"><svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5zM4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></svg></span><b data-i18n="r2">Maestro</b><small data-i18n="r2t">Notas, asistencia, exámenes y mensajes de sus cursos.</small></button>
+      <button type="button" class="role" role="tab" id="tab-alumno" aria-selected="false" aria-controls="demoView" tabindex="-1" data-rol="alumno" data-prev="inicio-alumno"><span class="role-ico"><svg viewBox="0 0 24 24"><path d="M6 9a6 6 0 0 1 12 0v10a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2zM9 4.5V3h6v1.5M9 14h6"/></svg></span><b data-i18n="r3">Alumna</b><small data-i18n="r3t">Sus cursos, pendientes, lecturas y exámenes en línea.</small></button>
+      <button type="button" class="role" role="tab" id="tab-padre" aria-selected="false" aria-controls="demoView" tabindex="-1" data-rol="padre" data-prev="progreso"><span class="role-ico"><svg viewBox="0 0 24 24"><circle cx="8" cy="7" r="3"/><circle cx="17" cy="9" r="2.3"/><path d="M2.5 20a5.5 5.5 0 0 1 11 0M13.5 20a4 4 0 0 1 7.5-2"/></svg></span><b data-i18n="r4">Familia</b><small data-i18n="r4t">Notas, asistencia y avisos de todos sus hijos.</small></button>
+    </div>
+    <div class="demo-frame reveal" id="demoView" role="tabpanel" aria-labelledby="tab-direccion">
       <div class="demo-bar"><span></span><span></span><span></span><b>Naoj</b></div>
+      <img class="demo-poster" data-shot="dash-direccion" alt="" width="1600" height="1000" loading="lazy">
       <iframe id="demoFrame" title="Demo interactiva de Naoj" data-i18n-title="demo.iframe" loading="lazy" data-src="demo/"></iframe>
     </div>
     <p class="demo-open"><a class="btn light" id="demoOpen" href="demo/" target="_blank" rel="noopener" data-i18n="demo.open">Abrir la demo en pantalla completa</a></p>
@@ -286,11 +301,13 @@
 
 <!-- ═════ CIERRE ═════ -->
 <section class="final">
+  <div class="patron patron-final" aria-hidden="true"></div>
   <div class="wrap final-in reveal">
-    <img class="mark" src="img/marca/naoj-isotipo-blanco.svg" alt="" width="76" height="71">
+    <div class="final-mark" aria-hidden="true"><span class="halo"></span><img src="img/marca/naoj-isotipo-menta.svg" alt="" width="120" height="112"></div>
     <h2 data-i18n="final.title">Que todo el colegio esté al día.</h2>
     <p data-i18n="final.text">Cuéntenos cómo trabaja hoy su colegio y le mostramos Naoj con sus propios grados y cursos.</p>
-    <a class="btn light big" data-wa="final" href="https://wa.me/50258253416" target="_blank" rel="noopener"><span data-i18n="cta.whatsapp2">Escríbanos por WhatsApp</span></a>
+    <a class="btn mint big" data-wa="final" href="https://wa.me/50258253416" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1a17 17 0 0 1-1.7-.6 13.4 13.4 0 0 1-5.1-4.5c-.4-.5-1.3-1.8-1.3-3.4s.8-2.4 1.2-2.7c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .7.5l1 2.3c.1.2.1.4 0 .6l-.4.6-.5.5c-.2.2-.3.3-.1.6.2.3.8 1.4 1.8 2.2 1.2 1.1 2.2 1.4 2.5 1.6.3.1.5.1.7-.1l.9-1.1c.2-.3.4-.2.7-.1l2.2 1c.3.2.5.2.6.4.1.1.1.8-.2 1.6z"/></svg><span data-i18n="cta.request">Solicitar una demostración</span></a>
+    <p class="final-note" data-i18n="final.note">Le respondemos por WhatsApp. La primera conversación no tiene costo.</p>
   </div>
 </section>
 </main>

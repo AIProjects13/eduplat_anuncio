@@ -75,6 +75,15 @@
     'q7': 'How much does it cost?', 'a7': 'It depends on the edition and what needs adapting. Message us and in the first conversation we give you a price range, free of charge.',
     'final.title': 'Keep the whole school up to date.', 'final.text': 'Tell us how your school works today and we’ll show you Naoj with your own grade levels and courses.',
     'ftr.by': 'A product of', 'ftr.rights': 'All rights reserved.',
+    // Versión con movimiento: tarjetas, demostraciones, perfiles y cierre
+    'hero.c1': 'School average', 'hero.c2': 'Today’s attendance', 'hero.c3': 'Thank you! We’ll be there.',
+    'f1.chip': 'Unit average', 'f2.s1': 'Present', 'f2.s2': 'Late', 'f2.s3': 'Absent', 'f2.s4': 'Excused',
+    'f3.chip': 'Read and understood', 'f3.chip2': 'families', 'f4.mes': 'Oct', 'f4.chip': 'Meeting confirmed', 'f4.chip2': '3:00 pm · Office',
+    'f5.chip': 'Time left', 'f6.chip': 'New grade · Math',
+    'demo.rolesAria': 'Demo profiles', 'r1': 'Administration', 'r1t': 'The whole school at a glance: grade levels, courses and students at risk.',
+    'r2': 'Teacher', 'r2t': 'Grades, attendance, exams and messages for their courses.', 'r3': 'Student', 'r3t': 'Her courses, pending work, readings and online exams.',
+    'r4': 'Family', 'r4t': 'Grades, attendance and notices for all their children.',
+    'cta.request': 'Request a demo', 'final.note': 'We reply on WhatsApp. The first conversation is free.',
   };
   const TITLE = { es: 'Naoj · El colegio al día, y cada familia también', en: 'Naoj · The whole school up to date, and every family too' };
   const MSG = {
@@ -113,7 +122,8 @@
     });
     // Demo en el mismo idioma
     const f = document.getElementById('demoFrame'), o = document.getElementById('demoOpen');
-    const demoUrl = lang === 'en' ? 'demo/?lang=en' : 'demo/';
+    const rol = window.NAOJ_rol || 'direccion';
+    const demoUrl = `demo/?como=${rol}` + (lang === 'en' ? '&lang=en' : '');
     if (o) o.href = demoUrl;
     if (f) { f.dataset.src = demoUrl; if (f.src) f.src = demoUrl; }
     document.querySelectorAll('[data-lang]').forEach(b => { b.classList.toggle('on', b.dataset.lang === lang); b.setAttribute('aria-pressed', b.dataset.lang === lang); });
