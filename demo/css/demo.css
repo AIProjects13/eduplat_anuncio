@@ -1,4 +1,40 @@
-/* Naoj · demo: barra superior y modo captura */
+/* Naoj · demo: colores de marca Pixan, logo Naoj, barra superior y modo captura */
+
+/* Colores Pixan sobre el tema de la app (solo en la demo) */
+:root {
+    --navy: #14201C; --navy-2: #1C2B25; --navy-3: #2A3D35;
+    --primary: #1F6B53; --primary-700: #164D3C; --primary-400: #2F8A6C; --primary-50: #E2ECE6;
+    --secondary: #1F6B53; --secondary-700: #164D3C; --secondary-50: #E2ECE6;
+    --tertiary: #2E9E6E; --tertiary-700: #1E7A52; --tertiary-50: #E1F3EA;
+    --grad-primary: #1F6B53; --grad-secondary: #2F8A6C; --grad-tertiary: #2E9E6E;
+    --grad-hero: linear-gradient(135deg, #14201C 0%, #1F3B31 100%);
+    --ice: #F3F5F1; --grad-ice: #F7F9F6;
+    --info: #164D3C; --info-bg: #E2ECE6;
+    --bg: #F3F5F1; --surface: #FFFFFF; --surface-2: #F7F9F6;
+    --border: #E1E7E1; --border-strong: #D1D9D2;
+    --text: #14201C; --text-2: #3C4A44; --muted: #7A877F;
+    --shadow-sm: 0 1px 2px rgba(20, 32, 28, .05);
+    --shadow: 0 10px 30px -14px rgba(20, 32, 28, .25);
+    --shadow-lg: 0 28px 60px -24px rgba(8, 14, 12, .55);
+    --shadow-soft: 0 1px 2px rgba(20, 32, 28, .04), 0 8px 22px -14px rgba(20, 32, 28, .16);
+    --shadow-soft-sm: 0 1px 2px rgba(20, 32, 28, .05);
+    --ring: 0 0 0 3px rgba(31, 107, 83, .28);
+}
+.topbar { background: rgba(243, 245, 241, .92); }
+.mini-cal-grid button.is-out { color: #C3CCC6; }
+.anillo { background: conic-gradient(var(--col) calc(var(--pct) * 1%), #E3E9E4 0); }
+.destacado .btn { background: #9FD8BF; color: #14201C; }
+.destacado .btn:hover:not(:disabled) { background: #B5E3CF; }
+
+/* Logo Naoj: la N (isotipo) + el texto NAOJ como logotipo */
+.brand-mark { color: #9FD8BF; width: 38px; height: 36px; }
+.brand-mark svg { width: 34px; height: 32px; }
+.brand-lg .brand-mark svg { width: 46px; height: 43px; }
+.brand-lg .brand-mark { width: 50px; height: 47px; }
+.brand-name { display: inline-flex; color: #fff; }
+.brand-name svg { height: 17px; width: auto; display: block; }
+.brand-lg .brand-name svg { height: 22px; }
+
 :root { --demo-h: 46px; }
 body:not(.shot) { padding-top: var(--demo-h); }
 body:not(.shot) .sidebar { top: var(--demo-h); }
@@ -9,21 +45,21 @@ body:not(.shot) .app-shell, body:not(.shot) .main { min-height: calc(100dvh - va
 .demo-bar {
     position: fixed; inset: 0 0 auto 0; height: var(--demo-h); z-index: 90;
     display: flex; align-items: center; gap: 12px; padding: 0 16px;
-    background: #F2B33D; color: #14213D;
+    background: #1F6B53; color: #fff;
     font: 600 13px/1.2 'Plus Jakarta Sans', system-ui, sans-serif;
 }
-.demo-tag { background: #14213D; color: #fff; font-weight: 800; font-size: 11px; letter-spacing: .08em; padding: 4px 9px; border-radius: 999px; }
+.demo-tag { background: #fff; color: #1F6B53; font-weight: 800; font-size: 11px; letter-spacing: .08em; padding: 4px 9px; border-radius: 999px; }
 .demo-sp { flex: 1; }
 .demo-como { display: inline-flex; align-items: center; gap: 8px; white-space: nowrap; }
 .demo-como select {
-    font: inherit; font-weight: 700; color: #14213D; background: rgba(255, 255, 255, .75);
-    border: 1px solid rgba(20, 33, 61, .25); border-radius: 999px; padding: 5px 12px; cursor: pointer;
+    font: inherit; font-weight: 700; color: #14201C; background: #fff;
+    border: 1px solid rgba(255, 255, 255, .4); border-radius: 999px; padding: 5px 12px; cursor: pointer;
 }
-.demo-como select:focus-visible, .demo-cta:focus-visible, .demo-reset:focus-visible { outline: 2px solid #14213D; outline-offset: 2px; }
+.demo-como select:focus-visible, .demo-cta:focus-visible, .demo-reset:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
 .demo-reset { all: unset; cursor: pointer; font-weight: 700; padding: 6px 10px; border-radius: 999px; }
-.demo-reset:hover { background: rgba(20, 33, 61, .1); }
-.demo-cta { color: #fff; background: #14213D; text-decoration: none; font-weight: 800; padding: 7px 15px; border-radius: 999px; white-space: nowrap; }
-.demo-cta:hover { background: #1f3260; }
+.demo-reset:hover { background: rgba(255, 255, 255, .12); }
+.demo-cta { color: #164D3C; background: #fff; text-decoration: none; font-weight: 800; padding: 7px 15px; border-radius: 999px; white-space: nowrap; }
+.demo-cta:hover { background: #E2ECE6; }
 @media (max-width: 1320px) { .demo-txt { display: none; } }
 @media (max-width: 480px) { .demo-como > span, .demo-reset { display: none; } .demo-bar { gap: 8px; padding: 0 10px; } }
 
