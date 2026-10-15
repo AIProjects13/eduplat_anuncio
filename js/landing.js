@@ -4,6 +4,7 @@
   const WA = '50258253416';
   // Idiomas con juego de capturas propio; los demás usan las capturas en español.
   const SHOT_LANGS = ['es'];
+  const SHOTS_V = '202610152';   // súbelo al regenerar las capturas
 
   // ── Textos en inglés (el español está escrito en el HTML)
   const EN = {
@@ -104,7 +105,7 @@
     document.querySelectorAll('[data-i18n-content]').forEach(el => el.setAttribute('content', T(el.dataset.i18nContent)));
     // Capturas en el idioma elegido (si existe ese juego)
     const shots = SHOT_LANGS.includes(lang) ? lang : 'es';
-    document.querySelectorAll('img[data-shot]').forEach(img => { img.src = `img/shots/${shots}/${img.dataset.shot}.jpg`; });
+    document.querySelectorAll('img[data-shot]').forEach(img => { img.src = `img/shots/${shots}/${img.dataset.shot}.jpg?v=${SHOTS_V}`; });
     // WhatsApp con el mensaje ya escrito
     document.querySelectorAll('[data-wa]').forEach(a => {
       const m = MSG[lang][a.dataset.wa] || MSG[lang].def;

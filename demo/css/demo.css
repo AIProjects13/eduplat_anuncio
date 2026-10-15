@@ -22,6 +22,7 @@
 }
 .topbar { background: rgba(243, 245, 241, .92); }
 .mini-cal-grid button.is-out { color: #C3CCC6; }
+.alert-info { color: #164D3C; }
 .anillo { background: conic-gradient(var(--col) calc(var(--pct) * 1%), #E3E9E4 0); }
 .destacado .btn { background: #9FD8BF; color: #14201C; }
 .destacado .btn:hover:not(:disabled) { background: #B5E3CF; }
